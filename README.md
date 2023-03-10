@@ -1,6 +1,6 @@
 # kubefirst-watcher
 
-This is part of the [kubefirst watcher operator](https://github.com/kubefirst/kubefirst-watcher-operator). 
+This is part of the [kubefirst watcher operator](https://github.com/kxdroid/k8s-watcher-operator). 
 
 This tool will help to detect a combination of status of the cluster to hold action to be executed only after given state. 
 
@@ -19,3 +19,10 @@ echo $GIT_SHA
 ```
 
 This images need to be migrated to kubefirst docker registry
+
+
+This is a derivative work from: 
+
+- [k1-watcher PoC](https://github.com/6za/k1-watcher) that was the source to deliver the [Kubefirst watcher](https://github.com/kubefirst/kubefirst-watcher). 
+
+This project will its own road of support, not connected to the projects above. As this is just a variation for personal projects exploration.

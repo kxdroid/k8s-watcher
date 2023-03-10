@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 .vscode/settings.json
 k1-watcher
+k8s-watcher

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/v1beta1"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/v1beta1"
 	batchv1 "k8s.io/api/batch/v1"
 	"k8s.io/client-go/tools/cache"
 )
@@ -59,7 +59,7 @@ func CheckMatchConditionJob(obj *batchv1.Job, labelsFound map[string]string, con
 
 }
 
-//ExtractJobMap - Convert Job to Map
+// ExtractJobMap - Convert Job to Map
 func ExtractJobMap(obj *batchv1.Job) map[string]string {
 	result := map[string]string{}
 	if len(obj.Name) > 0 {
@@ -75,7 +75,7 @@ func ExtractJobMap(obj *batchv1.Job) map[string]string {
 	return result
 }
 
-//ExtractJobConditionMap - Converts JobCondition to Map
+// ExtractJobConditionMap - Converts JobCondition to Map
 func ExtractJobConditionMap(obj *v1beta1.JobCondition) map[string]string {
 	result := map[string]string{}
 	if len(obj.Name) > 0 {

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/v1beta1"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/v1beta1"
 	appsv1 "k8s.io/api/apps/v1"
 	"k8s.io/client-go/tools/cache"
 )
@@ -48,7 +48,7 @@ func CheckMatchConditionStatefulSet(obj *appsv1.StatefulSet, labelsFound map[str
 	}
 }
 
-//ExtractPodMap - Convert Pod to Map
+// ExtractPodMap - Convert Pod to Map
 func ExtractStatefulSetMap(obj *appsv1.StatefulSet) map[string]string {
 	result := map[string]string{}
 	if len(obj.Name) > 0 {
@@ -67,7 +67,7 @@ func ExtractStatefulSetMap(obj *appsv1.StatefulSet) map[string]string {
 	return result
 }
 
-//ExtractPodConditionMap - Convert PodCondition to Map
+// ExtractPodConditionMap - Convert PodCondition to Map
 func ExtractStatefulSetConditionMap(obj *v1beta1.StatefulSetCondition) map[string]string {
 	result := map[string]string{}
 	if len(obj.Name) > 0 {

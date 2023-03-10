@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/crd"
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/v1beta1"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/crd"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/v1beta1"
 	"go.uber.org/zap"
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/kubernetes"

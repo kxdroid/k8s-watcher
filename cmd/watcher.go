@@ -1,16 +1,15 @@
 /*
 Copyright © 2022 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
 import (
 	"fmt"
 
-	"github.com/kubefirst/kubefirst-watcher/cmd/internal/logutils"
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/crd"
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/informer"
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/k8s"
+	"github.com/kxdroid/k8s-watcher/cmd/internal/logutils"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/crd"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/informer"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/k8s"
 	"github.com/spf13/cobra"
 )
 

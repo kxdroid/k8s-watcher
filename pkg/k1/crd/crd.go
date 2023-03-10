@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/k8s"
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/v1beta1"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/k8s"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/v1beta1"
 	"go.uber.org/zap"
 	api "k8s.io/apimachinery/pkg/types"
 )

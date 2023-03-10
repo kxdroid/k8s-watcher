@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/informer"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/informer"
 	"github.com/thoas/go-funk"
 )
 

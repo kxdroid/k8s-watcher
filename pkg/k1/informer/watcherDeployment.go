@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/v1beta1"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/v1beta1"
 	appsv1 "k8s.io/api/apps/v1"
 	"k8s.io/client-go/tools/cache"
 )
@@ -48,7 +48,7 @@ func CheckMatchConditionDeployment(obj *appsv1.Deployment, labelsFound map[strin
 	}
 }
 
-//ExtractPodMap - Convert Pod to Map
+// ExtractPodMap - Convert Pod to Map
 func ExtractDeploymentMap(obj *appsv1.Deployment) map[string]string {
 	result := map[string]string{}
 	if len(obj.Name) > 0 {
@@ -67,7 +67,7 @@ func ExtractDeploymentMap(obj *appsv1.Deployment) map[string]string {
 	return result
 }
 
-//ExtractPodConditionMap - Convert PodCondition to Map
+// ExtractPodConditionMap - Convert PodCondition to Map
 func ExtractDeploymentConditionMap(obj *v1beta1.DeploymentCondition) map[string]string {
 	result := map[string]string{}
 	if len(obj.Name) > 0 {

@@ -3,7 +3,7 @@ package informer
 import (
 	"fmt"
 
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/v1beta1"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/v1beta1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/tools/cache"
 )
@@ -59,7 +59,7 @@ func CheckMatchConditionPod(obj *corev1.Pod, labelsFound map[string]string, cond
 	}
 }
 
-//ExtractPodMap - Convert Pod to Map
+// ExtractPodMap - Convert Pod to Map
 func ExtractPodMap(obj *corev1.Pod) map[string]string {
 	result := map[string]string{}
 	if len(obj.Name) > 0 {
@@ -75,7 +75,7 @@ func ExtractPodMap(obj *corev1.Pod) map[string]string {
 	return result
 }
 
-//ExtractPodConditionMap - Convert PodCondition to Map
+// ExtractPodConditionMap - Convert PodCondition to Map
 func ExtractPodConditionMap(obj *v1beta1.PodCondition) map[string]string {
 	result := map[string]string{}
 	if len(obj.Name) > 0 {

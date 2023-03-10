@@ -1,4 +1,4 @@
-module github.com/kubefirst/kubefirst-watcher
+module github.com/kxdroid/k8s-watcher
 
 go 1.18
 

@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/informer"
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/v1beta1"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/informer"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/v1beta1"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	appsv1 "k8s.io/api/apps/v1"
@@ -16,16 +16,16 @@ import (
 )
 
 /*
-func Test_Subset(t *testing.T) {
-	funk.Contains([]string{"foo", "bar"}, "bar")
-	labelAll := map[string]string{"label1": "value1", "label2": "value2", "label3": "value3"}
-	labelSubset := map[string]string{"label2": "value2", "label3": "value3"}
+	func Test_Subset(t *testing.T) {
+		funk.Contains([]string{"foo", "bar"}, "bar")
+		labelAll := map[string]string{"label1": "value1", "label2": "value2", "label3": "value3"}
+		labelSubset := map[string]string{"label2": "value2", "label3": "value3"}
 
-	isSubset := funk.Contains(labelAll, labelSubset)
-	//funk.Subset(labelSubset, labelAll)
-	if !isSubset {
-		t.Errorf("Not isSubset, got: %v ", isSubset)
-	}
+		isSubset := funk.Contains(labelAll, labelSubset)
+		//funk.Subset(labelSubset, labelAll)
+		if !isSubset {
+			t.Errorf("Not isSubset, got: %v ", isSubset)
+		}
 
 }
 */

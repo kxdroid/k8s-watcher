@@ -3,7 +3,7 @@ package informer
 import (
 	"fmt"
 
-	"github.com/kubefirst/kubefirst-watcher/pkg/k1/v1beta1"
+	"github.com/kxdroid/k8s-watcher/pkg/k1/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/tools/cache"
 )
@@ -59,7 +59,7 @@ func CheckMatchBasicConfigurationCondition(obj *v1beta1.BasicConfigurationCondit
 	}
 }
 
-//ExtractBasicConfigurationMap - converts BasicConfigurationCondition to Map
+// ExtractBasicConfigurationMap - converts BasicConfigurationCondition to Map
 func ExtractBasicConfigurationMap(obj *v1beta1.BasicConfigurationCondition) map[string]string {
 	result := map[string]string{}
 	if len(obj.Name) > 0 {
