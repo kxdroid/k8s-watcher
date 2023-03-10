@@ -49,7 +49,7 @@ func init() {
 
 	watcherCmd.Flags().StringVarP(&configFile, "config-file", "c", "", "Provide a yaml with watcher settings")
 	watcherCmd.Flags().StringVarP(&ownerFile, "owner-file", "o", "", "Provide a yaml with CRD owner refernece")
-	watcherCmd.Flags().StringVar(&crdAPIVersion, "crd-api-version", "k1.kubefirst.io/v1beta1", `CRD API Version.`)
+	watcherCmd.Flags().StringVar(&crdAPIVersion, "crd-api-version", "kxdroid.github.io/v1beta1", `CRD API Version.`)
 	watcherCmd.Flags().StringVar(&crdNamespace, "crd-namespace", "default", `CRD Namespace.`)
 	watcherCmd.Flags().StringVar(&crdName, "crd-instance", "", `CRD instance name. Mandatory in CRD mode.`)
 	watcherCmd.Flags().StringVar(&crdResource, "crd-resource", "watchers", `CRD Resource name`)

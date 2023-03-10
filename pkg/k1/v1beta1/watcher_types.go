@@ -1,5 +1,5 @@
 /*
-Copyright 2022 K-rays.
+Copyright 2022 Cesar Filho.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -84,7 +84,7 @@ type JobCondition struct {
 	Failed int32 `json:"failed,omitempty"`
 }
 
-//WatcherCondition watcher matching rules
+// WatcherCondition watcher matching rules
 type WatcherCondition struct {
 	ID        int               `json:"id,omitempty"`
 	Namespace string            `json:"namespace"`
@@ -95,7 +95,7 @@ type WatcherCondition struct {
 	Status string `json:"status,omitempty"`
 }
 
-//DeploymentCondition deployment matching rules
+// DeploymentCondition deployment matching rules
 type DeploymentCondition struct {
 	ID        int               `json:"id,omitempty"`
 	Namespace string            `json:"namespace"`
@@ -111,7 +111,7 @@ type DeploymentCondition struct {
 	Ready string `json:"ready,omitempty"`
 }
 
-//StatefulSetCondition deployment matching rules
+// StatefulSetCondition deployment matching rules
 type StatefulSetCondition struct {
 	ID        int               `json:"id,omitempty"`
 	Namespace string            `json:"namespace"`
