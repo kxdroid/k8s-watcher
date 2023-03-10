@@ -1,21 +1,19 @@
-FROM cgr.dev/chainguard/go:1.18
-
-RUN apt-get update && \
-    apt-get install -y unzip curl jq vim unzip less \
-     && rm -rf /var/lib/apt/lists/* 
-
+FROM golang:1.18 as build
 
 # setup user
 RUN useradd -ms /bin/bash developer
 USER developer
-WORKDIR /home/developer/kubefirst
+WORKDIR /home/developer/
 
 COPY --chown=developer:developer . .
 
 # download dependencies and prepare fresh installation
 RUN go mod download
 RUN go build .
+RUN chmod 777 /home/developer/k8s-watcher
 
-USER root
-RUN  mv ./k8s-watcher /usr/local/bin/ && chmod 777 /usr/local/bin/k8s-watcher
-USER developer
+FROM debian:buster
+
+COPY --from=build /home/developer/k8s-watcher /k8s-watcher
+RUN chmod +x /k8s-watcher
+CMD ["/k8s-watcher"]
